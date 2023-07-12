@@ -3,14 +3,19 @@
 }
 
 body {
-  font-family: sans-serif;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 20px;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
+  text-align: center;
   margin-top: 0;
-  font-size: 22px;
+  font-size: 60px;
 }
 
 h2 {
@@ -46,29 +51,37 @@ ul {
   padding-left: 20px;
 }
 
-* {
-  box-sizing: border-box;
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: -100px;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+.game{
+  display: flex;
+  flex-direction: row;
+}
+
+.status{
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .square {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 100px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 100px;
 }
 
 .board-row:after {
@@ -77,14 +90,23 @@ body {
   display: table;
 }
 
-.status {
-  margin-bottom: 10px;
-}
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
 .game-info {
   margin-left: 20px;
+  margin-top: 20px;
+}
+.game-info ol li {
+  margin: 3px 0;
+}
+
+.game-info ol li button{
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.game-info ol li button:hover {
+  background-color: black;
+  color: #fff;
 }

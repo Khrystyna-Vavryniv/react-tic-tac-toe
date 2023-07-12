@@ -26,7 +26,7 @@ function Board({ xIsNext, squares, onPlay }) {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
-    status = 'Winner: ' + winner;
+    status = 'The Winner is: ' + winner;
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
@@ -84,12 +84,15 @@ export default function Game() {
   });
 
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      </div>
-      <div className="game-info">
-        <ol>{moves}</ol>
+    <div className='game-wrapper'>
+      <h1>Tic-Tac-Toe</h1>
+      <div className="game">        
+        <div className="game-board">
+          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+        </div>
+        <div className="game-info">
+          <ol>{moves}</ol>
+        </div>
       </div>
     </div>
   );
